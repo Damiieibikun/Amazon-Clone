@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face { 
+    font-family: "AmazonEmber"; 
+    src: url("./assets/AmazonEmber_W_Bd.woff2"); 
+} 
+@font-face { 
+    font-family: "AmazonEmber-Regular"; 
+    src: url("./assets/pDxWAF1pBB0dzGB.woff2"); 
+} 
+@font-face { 
+    font-family: "AmazonEmber-RegularItalics"; 
+    src: url("./assets/WOnTLzkiaEccV7F.woff2"); 
+} 
+@font-face { 
+    font-family: "AmazonEmber-Italics"; 
+    src: url("./assets/2SazJx$EeTHfhMN.woff2"); 
+} 
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
