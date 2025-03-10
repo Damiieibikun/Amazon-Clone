@@ -5,20 +5,20 @@ export const APIProvider = ({children})=>{
 
 let storedUsers = JSON.parse(localStorage.getItem('AllUsers')) || []
    
-const baseURL = 'http://ecommerce.reworkstaging.name.ng/v2'
+const baseURL = process.env.REACT_APP_BASE_URL;
 const [merchantId, setMerchantId] = useState(() => {
     try {
       const storedMerchantInfo = localStorage.getItem('merchantInfo');
 
       if (storedMerchantInfo) {
         const merchantInfo = JSON.parse(storedMerchantInfo);
-        return merchantInfo.id || '67091ffa80dc20362000183a'; 
+        return merchantInfo.id || process.env.REACT_APP_MERCHANT_ID; 
       }
     } catch (error) {
       console.error("Failed to parse merchantInfo from localStorage:", error);
     }
   
-    return '67091ffa80dc20362000183a';
+    return process.env.REACT_APP_MERCHANT_ID;
   });
 
 // get all products from merchant

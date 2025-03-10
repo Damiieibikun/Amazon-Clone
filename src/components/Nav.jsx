@@ -106,7 +106,7 @@ const logout = ()=>{
 </div>
 <div className='absolute right-[45px] bg-white min-w-fit flex flex-col mx-auto z-40 p-4 rounded-[4px] invisible' id='popperSignin' onMouseLeave={hidePopper}>  
     <div className={`flex-col ${currentUserInfo ? `hidden`: `flex`}`}>
-    <Link to={'/login'} className='text-center' onClick={removeSideCart}>
+    <Link to={'/login'} className='text-center flex justify-center' onClick={removeSideCart}>
     <Button text='Sign in' classStyle={'bg-[#FFD814] w-[50%] font-AmazonEmberRegular text-[12px] hover:underline'}/>
     </Link>
     <p className='text-[11px] flex gap-[2px] items-center justify-center mt-1'>New customer? 

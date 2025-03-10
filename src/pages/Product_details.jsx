@@ -29,7 +29,7 @@ const Product_details = () => {
 
     const [viewImg, setViewImage] = useState(0)
 
-    const baseURL = 'http://ecommerce.reworkstaging.name.ng/v2';    
+    const baseURL = process.env.REACT_APP_BASE_URL;  
     const getProduct = async () => {      
         try {
             const response = await axios.get(`${baseURL}/products/${id}`);

@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { APIcontext } from "./APIContext";
 
 const appContex = createContext();
@@ -12,7 +11,6 @@ const AppContexProvider =({children})=>{
 
     const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
     const [page, setPage] = useState('/')
-    // const [clickedCart, setclickedCart] = useState(false)
     const storedValue = localStorage.getItem('cart-clicked')
     const [clickedCart, setclickedCart] = useState(storedValue === 'true' || false)
   
