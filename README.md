@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# E-Commerce Frontend (Amazon Clone)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a frontend e-commerce application built with React, designed as an exact UI clone of Amazon. It integrates with a live API to allow users to:
+- Add products to cart
+- Delete products from cart
+- Update product quantity in cart
+- Add reviews and ratings
+- Like products
 
-## Available Scripts
+## Features
+- **Product Management:** Fetch and display products dynamically from the API.
+- **Shopping Cart:** Add, update, and remove items from the cart with real-time updates.
+- **User Interaction:** Users can rate, review, and like products.
+- **Responsive Design:** Fully optimized for desktop and mobile devices.
+- **State Management:** Uses React Context API for state management.
 
-In the project directory, you can run:
+## Tech Stack
+- **Frontend:** React, React Router, Context API, Tailwind CSS 
+- **Backend:** Live API 
+- **Package Manager:** npm
 
-### `npm start`
+## Installation
+To set up the project locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/Damiieibikun/Amazon-Clone.git
+   
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Navigate to the project directory:**
+   ```sh
+   cd ecommerce-frontend
+   ```
 
-### `npm test`
+3. **Install dependencies:**
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Create an environment file:**
+   Create a `.env` file in the root directory and add your API keys:
+   ```env
+   REACT_APP_API_BASE_URL=https://your-live-api-url.com
+   ```
 
-### `npm run build`
+5. **Run the application:**
+   ```sh
+   npm start
+   # or
+   yarn start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. **Access the application:**
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API Interaction
+The frontend interacts with the backend API using `fetch` or `axios`. Here are the key API endpoints used:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Fetch Products:** `GET /products?merchant_id={merchantId}`
+- **Fetch Categories:** `GET /categories?merchant_id={merchantId}`
+- **Create User:** `POST /users`
+- **Login User:** `POST /users/login`
+- **Add to Cart:** `POST /cart`
+- **Update Cart Quantity:** `PUT /cart/:id`
+- **Delete from Cart:** `DELETE /cart/:id`
+- **Post Review:** `POST /reviews`
+- **Delete Review:** `DELETE /reviews`
+- **Edit Review:** `PUT /reviews/{id}`
+- **Post Rating:** `POST /ratings`
+- **Delete Rating:** `DELETE /ratings`
+- **Edit Rating:** `PUT /ratings`
+- **Get Likes:** `GET /users/likes?user_id={id}`
+- **Like Product:** `POST /likes`
+- **Remove Like:** `DELETE /likes`
 
-### `npm run eject`
+> Ensure the API base URL is set correctly in `.env` before running the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## File Structure
+```
+📦 ecommerce-frontend
+├── 📂 src
+│   ├── 📂 components   # Reusable components (Navbar, ProductCard, etc.)
+│   ├── 📂 pages        # Pages (Home, Cart, Product Details, etc.)
+│   ├── 📂 context      # Context API for global state management (if used)
+│   ├── 📂 assets       # Images, icons, etc.
+│   ├── App.js         # Main application file
+│   ├── index.js       # Entry point
+├── .env               # Environment variables
+├── package.json       # Project dependencies and scripts
+├── README.md          # Documentation
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
+### Adding a Product to Cart
+1. Navigate to a product page.
+2. Click on "Add to Cart."
+3. View cart to update quantity or remove the item.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Updating Product Quantity
+1. Go to the cart page.
+2. Use the `+` or `-` buttons to change the quantity.
+3. Changes reflect in real-time.
 
-## Learn More
+### Adding Reviews and Ratings
+1. Open a product page.
+2. Scroll to the review section and submit a rating/comment.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Liking a Product
+1. Click the heart icon to like a product.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
+Contributions are welcome! To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m "Added new feature"`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
 
-### Code Splitting
+## License
+This project is licensed under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
