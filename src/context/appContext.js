@@ -148,15 +148,12 @@ const AppContexProvider =({children})=>{
         setError(errorObj)
         return Object.keys(errorObj).length === 0;
     
-      }
-
-      
+      }      
      
 
       const handleSubmit = (e) => {
         e.preventDefault()
         if (handleError()) {
-          console.log(inputValues) // make api call here ?? remember to delete repeat password
           createUser(inputValues)
         }
     
