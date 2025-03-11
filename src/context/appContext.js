@@ -69,7 +69,6 @@ const AppContexProvider =({children})=>{
 
       const handleEmailSubmit = (e) => {
         e.preventDefault()
-            console.log(loginError)
         return handleEmailError()
     
       }
