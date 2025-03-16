@@ -152,7 +152,7 @@ const Product_details = () => {
                     <div style={bg_img} className='h-full w-full bg-no-repeat bg-contain lg:bg-center'></div>
                 </div>
                 
-                <div className='h-[120vh] lg:overflow-y-auto p-3 flex gap-4 hide-scrollbar'>
+                <div className='min-h-[120vh] lg:overflow-y-auto p-3 sm:flex gap-4 hide-scrollbar'>
                     <div className='w-full flex flex-col gap-2'>
                         <p className='font-AmazonEmberRegular text-[22px]  text-gray-800 my-auto'>{title}</p>
                         <p className='px-3 m-0 font-AmazonEmberRegular text-[14px] text-cyan-700 hover:underline hover:text-red-600 cursor-pointer'>Visit the {brand} Store</p>

@@ -35,7 +35,7 @@ const CustomersReview = ({productInfo, arrayObj}) => {
 
    
   return (
-    <div className='grid p-4 grid-cols-1 md:grid-cols-[0.5fr_1.5fr]'>
+    <div className='grid justify-self-center p-4 grid-cols-1 md:grid-cols-[0.5fr_1.5fr]'>
         <div className='pb-5 w-fit min-w-[400px] flex flex-col content-center'>
         <hr className='w-3/4 mb-4'/>
       <p className='font-AmazonEmber text-[21px]'>Customer's reviews</p>     
